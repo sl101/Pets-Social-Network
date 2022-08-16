@@ -1,0 +1,11 @@
+.picture {
+	height: 250px;
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+
+.img {
+	max-width: 100%;
+	position: relative;
+	bottom: 50px;
+}

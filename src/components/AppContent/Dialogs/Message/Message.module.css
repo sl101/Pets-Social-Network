@@ -1,0 +1,12 @@
+.message {
+	align-self: start;
+	font-style: italic;
+	font-size: 22px;
+	padding: 5px 25px 10px;
+	background-color: #fff;
+	border-radius: 25px;
+}
+
+.message:not(:last-child) {
+	margin-bottom: 20px;
+}

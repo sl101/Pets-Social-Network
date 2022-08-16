@@ -1,0 +1,24 @@
+/* .content {} */
+
+.list {
+	flex: 1 1 100%;
+	padding: 0 20px 0 50px;
+}
+
+.item:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.title {
+	font-weight: 500;
+	font-size: 30px;
+	color: #000;
+}
+
+.value {
+	font-weight: 400;
+	font-size: 26px;
+	font-style: italic;
+	color: #000;
+	padding: 0 10px;
+}

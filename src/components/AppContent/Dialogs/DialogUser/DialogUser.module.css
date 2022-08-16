@@ -1,0 +1,13 @@
+.user:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.link,
+.active {
+	font-weight: 500;
+	font-size: 28px;
+}
+
+.active {
+	color: teal;
+}
