@@ -24,8 +24,12 @@
 	padding: 10px 10px 10px 30px;
 }
 
+.chat {
+	padding: 10px 50px;
+}
+
 .messages {
 	display: flex;
 	flex-direction: column;
-	padding: 10px 50px;
+	margin-bottom: 30px;
 }
