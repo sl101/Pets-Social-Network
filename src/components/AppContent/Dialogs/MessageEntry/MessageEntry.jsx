@@ -1,22 +1,29 @@
 import style from './MessageEntry.module.css';
 import React from 'react';
+import {
+	addMessageActionCreator,
+	updateMessageActionCreator,
+} from '../../../../redux/dialogs-reduser';
 
-const textareaRef = React.createRef();
+const MessageEntry = (props) => {
+	const addMessage = () => {
+		props.dispatch(addMessageActionCreator());
+	};
 
-const addPost = () => {
-	const text = textareaRef.current.value;
-	alert(text);
-};
+	const updateArea = (e) => {
+		const text = e.target.value;
+		props.dispatch(updateMessageActionCreator(text));
+	};
 
-const MessageEntry = () => {
 	return (
 		<div className={style.form}>
 			<textarea
 				className={style.textarea}
 				placeholder="Enter your post..."
-				ref={textareaRef}
+				onChange={updateArea}
+				value={props.updateMessage}
 			/>
-			<button className={style.button} onClick={addPost}>
+			<button className={style.button} onClick={addMessage}>
 				Add
 			</button>
 		</div>

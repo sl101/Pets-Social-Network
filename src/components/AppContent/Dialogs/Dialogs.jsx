@@ -19,7 +19,10 @@ const Dialogs = (props) => {
 				<ul className={style.users}>{dialogsElements}</ul>
 				<div className={style.chat}>
 					<ul className={style.messages}>{messagesElements}</ul>
-					<MessageEntry />
+					<MessageEntry
+						dispatch={props.dispatch}
+						updateMessage={props.dialogsData.updateMessage}
+					/>
 				</div>
 			</div>
 		</div>

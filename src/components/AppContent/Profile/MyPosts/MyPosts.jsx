@@ -11,7 +11,7 @@ const MyPosts = (props) => {
 		</li>
 	));
 
-	return <ul className={style.content}>{postsElements}</ul>;
+	return <ul className={style.content}>{postsElements.reverse()}</ul>;
 };
 
 export default MyPosts;

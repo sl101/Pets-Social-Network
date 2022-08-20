@@ -12,11 +12,21 @@ const AppContent = (props) => {
 			<Routes>
 				<Route
 					path="/profile/*"
-					element={<Profile profileData={props.contentData.profileData} />}
+					element={
+						<Profile
+							profileData={props.profileData}
+							dispatch={props.dispatch}
+						/>
+					}
 				/>
 				<Route
 					path="/dialogs/*"
-					element={<Dialogs dialogsData={props.contentData.dialogsData} />}
+					element={
+						<Dialogs
+							dialogsData={props.dialogsData}
+							dispatch={props.dispatch}
+						/>
+					}
 				/>
 				<Route path="/news/*" element={<News />} />
 				<Route path="/music/*" element={<Music />} />
