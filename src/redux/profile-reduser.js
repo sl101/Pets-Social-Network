@@ -57,8 +57,9 @@ const initialState = {
 
 const profileReduser = (state = initialState, action) => {
 	switch (action.type) {
-		case ADD_POST:
+		case ADD_POST: {
 			const post = state.updatePost;
+
 			if (post) {
 				const maxId = state.postsData.posts.length;
 				const newPost = {
@@ -67,14 +68,20 @@ const profileReduser = (state = initialState, action) => {
 					message: post,
 					likesCount: 0,
 				};
-				state.postsData.posts.push(newPost);
-				state.updatePost = '';
+
+				let stateCopy = { ...state };
+				stateCopy.postsData = { ...state.postsData };
+				stateCopy.postsData.posts = [...state.postsData.posts];
+				stateCopy.postsData.posts.push(newPost);
+				stateCopy.updatePost = '';
+
+				return stateCopy;
 			}
 			return state;
+		}
 
 		case UPDATE_POST:
-			state.updatePost = action.fieldValue;
-			return state;
+			return { ...state, updatePost: action.payLoad };
 
 		default:
 			return state;
@@ -83,7 +90,7 @@ const profileReduser = (state = initialState, action) => {
 
 export const addPostActionCreator = () => ({ type: ADD_POST });
 export const updatePostActionCreator = (value) => {
-	return { type: UPDATE_POST, fieldValue: value };
+	return { type: UPDATE_POST, payLoad: value };
 };
 
 export default profileReduser;

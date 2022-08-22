@@ -1,20 +1,17 @@
-import HeadPicture from './HeadPicture/HeadPicture';
-import MyPosts from './MyPosts/MyPosts';
+import HeadPictureContainer from './HeadPicture/HeadPictureContainer';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
-import PostEntry from './PostEntry/PostEntry';
+import PostEntryContainer from './PostEntry/PostEntryContainer';
 import style from './Profile.module.css';
 
 const Profile = (props) => {
 	return (
 		<div className={style.profile}>
-			<HeadPicture profileHeader={props.profileData.profileHeader} />
+			<HeadPictureContainer />
 			<div className={style.content}>
 				<ProfileInfo profileInfo={props.profileData.profileInfo} />
-				<PostEntry
-					updatePost={props.profileData.updatePost}
-					dispatch={props.dispatch}
-				/>
-				<MyPosts postsData={props.profileData.postsData} />
+				<PostEntryContainer />
+				<MyPostsContainer />
 			</div>
 		</div>
 	);

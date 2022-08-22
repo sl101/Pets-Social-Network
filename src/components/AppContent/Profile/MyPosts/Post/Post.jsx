@@ -1,4 +1,4 @@
-import Like from './Like/Like';
+import LikeContainer from './Like/LikeContainer';
 import style from './Post.module.css';
 
 const Post = (props) => {
@@ -10,10 +10,7 @@ const Post = (props) => {
 			<div className={style.body}>
 				<p>{props.elementData.message}</p>
 			</div>
-			<Like
-				emotionsIcons={props.emotionsIcons}
-				likesCount={props.elementData.likesCount}
-			/>
+			<LikeContainer />
 		</div>
 	);
 };

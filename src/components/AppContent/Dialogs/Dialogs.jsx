@@ -1,14 +1,14 @@
 import style from './Dialogs.module.css';
 import DialogUser from './DialogUser/DialogUser';
 import Message from './Message/Message';
-import MessageEntry from './MessageEntry/MessageEntry';
+import MessageEntryContainer from './MessageEntry/MessageEntryContainer';
 
 const Dialogs = (props) => {
-	const dialogsElements = props.dialogsData.usersData.map((element) => (
+	const dialogsElements = props.usersData.map((element) => (
 		<DialogUser userData={element} />
 	));
 
-	const messagesElements = props.dialogsData.messagesData.map((element) => (
+	const messagesElements = props.messagesData.map((element) => (
 		<Message messageData={element} />
 	));
 
@@ -19,10 +19,7 @@ const Dialogs = (props) => {
 				<ul className={style.users}>{dialogsElements}</ul>
 				<div className={style.chat}>
 					<ul className={style.messages}>{messagesElements}</ul>
-					<MessageEntry
-						dispatch={props.dispatch}
-						updateMessage={props.dialogsData.updateMessage}
-					/>
+					<MessageEntryContainer />
 				</div>
 			</div>
 		</div>

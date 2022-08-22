@@ -5,11 +5,11 @@ const PersonalSettings = (props) => {
 		<ul className={style.list}>
 			<li className={style.item}>
 				<span className={style.title}>Name:</span>
-				<span className={style.value}>{props.personalData.name}</span>
+				<span className={style.value}>{props.name}</span>
 			</li>
 			<li className={style.item}>
 				<span className={style.title}>Age:</span>
-				<span className={style.value}>{props.personalData.age}</span>
+				<span className={style.value}>{props.age}</span>
 			</li>
 		</ul>
 	);

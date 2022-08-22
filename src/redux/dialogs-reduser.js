@@ -21,7 +21,7 @@ const initialState = {
 
 const dialogsReduser = (state = initialState, action) => {
 	switch (action.type) {
-		case ADD_MESSAGE:
+		case ADD_MESSAGE: {
 			const message = state.updateMessage;
 			if (message) {
 				const maxId = state.messagesData.length;
@@ -29,14 +29,18 @@ const dialogsReduser = (state = initialState, action) => {
 					id: maxId + 1,
 					message: message,
 				};
-				state.messagesData.push(newMessage);
-				state.updateMessage = '';
+
+				let stateCopy = { ...state };
+				stateCopy.messagesData = [...state.messagesData];
+				stateCopy.messagesData.push(newMessage);
+				stateCopy.updateMessage = '';
+
+				return stateCopy;
 			}
 			return state;
-
+		}
 		case UPDATE_MESSAGE:
-			state.updateMessage = action.fieldValue;
-			return state;
+			return { ...state, updateMessage: action.payLoad };
 
 		default:
 			return state;
@@ -46,7 +50,7 @@ const dialogsReduser = (state = initialState, action) => {
 export const addMessageActionCreator = () => ({ type: ADD_MESSAGE });
 
 export const updateMessageActionCreator = (value) => {
-	return { type: UPDATE_MESSAGE, fieldValue: value };
+	return { type: UPDATE_MESSAGE, payLoad: value };
 };
 
 export default dialogsReduser;

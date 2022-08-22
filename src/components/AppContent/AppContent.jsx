@@ -1,5 +1,5 @@
 import Profile from './Profile/Profile';
-import Dialogs from './Dialogs/Dialogs';
+import DialogsContainer from './Dialogs/DialogsContainer';
 import News from './News/News';
 import Music from './Music/Music';
 import Settings from './Settings/Settings';
@@ -19,15 +19,7 @@ const AppContent = (props) => {
 						/>
 					}
 				/>
-				<Route
-					path="/dialogs/*"
-					element={
-						<Dialogs
-							dialogsData={props.dialogsData}
-							dispatch={props.dispatch}
-						/>
-					}
-				/>
+				<Route path="/dialogs/*" element={<DialogsContainer />} />
 				<Route path="/news/*" element={<News />} />
 				<Route path="/music/*" element={<Music />} />
 				<Route path="/settings/*" element={<Settings />} />

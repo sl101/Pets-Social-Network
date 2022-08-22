@@ -10,4 +10,6 @@ const redusers = combineReducers({
 });
 
 const store = createStore(redusers);
+
+window.store = store.getState();
 export default store;

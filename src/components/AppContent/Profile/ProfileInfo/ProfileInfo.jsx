@@ -1,12 +1,12 @@
-import Avatar from './Avatar/Avatar';
-import PersonalSettings from './PesonalSettings/PersonalSettings';
+import AvatarContainer from './Avatar/AvatarContainer';
+import PersonalSettingsContainer from './PesonalSettings/PersonalSettingsContainer';
 import style from './ProfileInfo.module.css';
 
 const ProfileInfo = (props) => {
 	return (
 		<div className={style.content}>
-			<Avatar avatar={props.profileInfo.avatar} />
-			<PersonalSettings personalData={props.profileInfo.personalData} />
+			<AvatarContainer />
+			<PersonalSettingsContainer />
 		</div>
 	);
 };
