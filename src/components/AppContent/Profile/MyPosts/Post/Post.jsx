@@ -3,7 +3,7 @@ import style from './Post.module.css';
 
 const Post = (props) => {
 	return (
-		<div className={style.content}>
+		<li className={style.item}>
 			<a className={style.link} href="jsx-a11y/anchor-is-valid">
 				<h2 className={style.nickName}>{props.elementData.name}</h2>
 			</a>
@@ -11,7 +11,7 @@ const Post = (props) => {
 				<p>{props.elementData.message}</p>
 			</div>
 			<LikeContainer />
-		</div>
+		</li>
 	);
 };
 

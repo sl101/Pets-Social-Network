@@ -1,5 +1,3 @@
-.content {}
-
-.item:not(:last-child) {
-	margin-bottom: 20px;
+.content {
+	bacground-color: teal;
 }

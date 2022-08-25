@@ -1,0 +1,58 @@
+.users {
+	padding: 0 0 30px;
+}
+
+.list {
+	/* padding: 5px 0 ; */
+}
+
+.item {
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center; */
+	margin-bottom: 10px;
+}
+
+.side {
+	max-width: 120px;
+	width: 100%;
+	text-align: center;
+	padding: 0 10px;
+}
+
+.picture {
+	max-width: 80px;
+	min-height: 80px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.content {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 8fr 2fr;
+	grid-template-areas: "name city""status country";
+	padding: 10px 20px;
+	border: 2px solid teal;
+	border-radius: 10px;
+}
+
+.name {
+	font-size: 20px;
+	font-weight: 500;
+	grid-area: name;
+}
+
+.city {
+	grid-area: city;
+}
+
+.status {
+	font-style: italic;
+	grid-area: status;
+	align-self: end;
+}
+
+.country {
+	grid-area: country;
+}

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import style from './Navbar.module.css';
+import Users from './../AppContent/Users/Users';
 
 const Navbar = () => {
 	return (
@@ -23,6 +24,16 @@ const Navbar = () => {
 						to="/dialogs"
 					>
 						Messages
+					</NavLink>
+				</li>
+				<li className={style.item}>
+					<NavLink
+						className={(navData) =>
+							navData.isActive ? style.active : style.link
+						}
+						to="/users"
+					>
+						Users
 					</NavLink>
 				</li>
 				<li className={style.item}>

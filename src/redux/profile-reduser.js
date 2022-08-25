@@ -69,8 +69,12 @@ const profileReduser = (state = initialState, action) => {
 					likesCount: 0,
 				};
 
+				// return {
+				// 	...state,
+				// 	updatePost: '',
+				// 	posts: [...state.postsData.posts, newPost],
+				// };
 				let stateCopy = { ...state };
-				stateCopy.postsData = { ...state.postsData };
 				stateCopy.postsData.posts = [...state.postsData.posts];
 				stateCopy.postsData.posts.push(newPost);
 				stateCopy.updatePost = '';

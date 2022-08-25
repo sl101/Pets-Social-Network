@@ -1,24 +1,18 @@
-import Profile from './Profile/Profile';
-import DialogsContainer from './Dialogs/DialogsContainer';
-import News from './News/News';
-import Music from './Music/Music';
-import Settings from './Settings/Settings';
-import style from './AppContent.module.css';
 import { Route, Routes } from 'react-router-dom';
+import style from './AppContent.module.css';
+import DialogsContainer from './Dialogs/DialogsContainer';
+import Music from './Music/Music';
+import News from './News/News';
+import Profile from './Profile/Profile';
+import Settings from './Settings/Settings';
+import UsersContainer from './Users/UsersContainer';
 
 const AppContent = (props) => {
 	return (
 		<section className={style.appContent}>
 			<Routes>
-				<Route
-					path="/profile/*"
-					element={
-						<Profile
-							profileData={props.profileData}
-							dispatch={props.dispatch}
-						/>
-					}
-				/>
+				<Route path="/profile/*" element={<Profile />} />
+				<Route path="/users/*" element={<UsersContainer />} />
 				<Route path="/dialogs/*" element={<DialogsContainer />} />
 				<Route path="/news/*" element={<News />} />
 				<Route path="/music/*" element={<Music />} />

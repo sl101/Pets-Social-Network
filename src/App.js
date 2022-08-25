@@ -10,11 +10,7 @@ const App = (props) => {
 			<div className="app-wrapper">
 				<HeaderContainer />
 				<Navbar />
-				<AppContent
-					profileData={props.state.profileData}
-					dialogsData={props.state.dialogsData}
-					dispatch={props.dispatch}
-				/>
+				<AppContent />
 			</div>
 		</div>
 	);

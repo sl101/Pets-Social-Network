@@ -3,9 +3,7 @@ import style from './MyPosts.module.css';
 
 const MyPosts = (props) => {
 	const postsElements = props.posts.map((element) => (
-		<li className={style.item}>
-			<Post elementData={element} />
-		</li>
+		<Post elementData={element} key={element.id} />
 	));
 
 	return <ul className={style.content}>{postsElements.reverse()}</ul>;

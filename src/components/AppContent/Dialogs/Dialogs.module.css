@@ -3,14 +3,6 @@
 
 }
 
-.title {
-	font-weight: 700;
-	font-size: 36px;
-	color: teal;
-	padding: 0 20px;
-	margin-bottom: 25px;
-}
-
 .inner {
 	display: grid;
 	grid-template-columns: 2fr 10fr;

@@ -4,12 +4,12 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 import PostEntryContainer from './PostEntry/PostEntryContainer';
 import style from './Profile.module.css';
 
-const Profile = (props) => {
+const Profile = () => {
 	return (
 		<div className={style.profile}>
 			<HeadPictureContainer />
 			<div className={style.content}>
-				<ProfileInfo profileInfo={props.profileData.profileInfo} />
+				<ProfileInfo />
 				<PostEntryContainer />
 				<MyPostsContainer />
 			</div>

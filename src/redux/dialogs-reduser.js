@@ -30,12 +30,11 @@ const dialogsReduser = (state = initialState, action) => {
 					message: message,
 				};
 
-				let stateCopy = { ...state };
-				stateCopy.messagesData = [...state.messagesData];
-				stateCopy.messagesData.push(newMessage);
-				stateCopy.updateMessage = '';
-
-				return stateCopy;
+				return {
+					...state,
+					updateMessage: '',
+					messagesData: [...state.messagesData, newMessage],
+				};
 			}
 			return state;
 		}
