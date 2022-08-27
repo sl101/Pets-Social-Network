@@ -2,14 +2,38 @@
 	padding: 0 0 30px;
 }
 
-.list {
-	/* padding: 5px 0 ; */
+.paginationCount {
+	max-width: 180px;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+	padding: 2px 7px;
+	margin: 0 auto 15px;
 }
+
+.pageNumber {
+	color: #000;
+}
+
+.pageNumber:not(:last-child) {
+	margin-right: 10px;
+}
+
+.selected {
+	font-weight: 700;
+}
+
+.pageSelection {
+	outline: none;
+
+
+}
+
+.list {}
 
 .item {
 	display: flex;
 	justify-content: space-between;
-	/* align-items: center; */
 	margin-bottom: 10px;
 }
 
