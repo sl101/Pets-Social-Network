@@ -3,15 +3,15 @@ import style from './AppContent.module.css';
 import DialogsContainer from './Dialogs/DialogsContainer';
 import Music from './Music/Music';
 import News from './News/News';
-import Profile from './Profile/Profile';
+import ProfileContainer from './Profile/ProfileContainer';
 import Settings from './Settings/Settings';
 import UsersContainer from './Users/UsersContainer';
 
-const AppContent = (props) => {
+const AppContent = () => {
 	return (
 		<section className={style.appContent}>
 			<Routes>
-				<Route path="/profile/*" element={<Profile />} />
+				<Route path="/profile/*" element={<ProfileContainer />} />
 				<Route path="/users/*" element={<UsersContainer />} />
 				<Route path="/dialogs/*" element={<DialogsContainer />} />
 				<Route path="/news/*" element={<News />} />

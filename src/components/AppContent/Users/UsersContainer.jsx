@@ -55,6 +55,8 @@ class UsersContainer extends React.Component {
 					/>
 				</>
 			);
+		} else {
+			return <Preloader />;
 		}
 	}
 }

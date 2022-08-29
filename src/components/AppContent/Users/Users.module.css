@@ -45,6 +45,7 @@
 }
 
 .picture {
+	display: block;
 	max-width: 80px;
 	min-height: 80px;
 	padding: 10px;

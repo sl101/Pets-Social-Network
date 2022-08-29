@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Users.module.css';
 import dart from '../../../image/s-l500.jpg';
+import { NavLink } from 'react-router-dom';
 
 const Users = (props) => {
 	let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -38,13 +39,13 @@ const Users = (props) => {
 				{props.users.map((u) => (
 					<li className={style.item} key={u.id}>
 						<div className={style.side}>
-							<div className={style.picture}>
+							<NavLink to={'/profile/' + u.id} className={style.picture}>
 								<img
 									className={style.img}
 									src={u.photos.small ? u.photos.small : dart}
 									alt={`${u.name} ${'avatar'}`}
 								/>
-							</div>
+							</NavLink>
 							<button
 								className={style.button}
 								onClick={() => {

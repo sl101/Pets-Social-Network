@@ -8,8 +8,8 @@ const PersonalSettings = (props) => {
 				<span className={style.value}>{props.name}</span>
 			</li>
 			<li className={style.item}>
-				<span className={style.title}>Age:</span>
-				<span className={style.value}>{props.age}</span>
+				<span className={style.title}>Status:</span>
+				<span className={style.value}>{props.aboutMe}</span>
 			</li>
 		</ul>
 	);

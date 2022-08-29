@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
 	return {
-		name: state.profileData.profileInfo.personalData.name,
-		age: state.profileData.profileInfo.personalData.age,
+		name: state.profileData.profile.fullName,
+		aboutMe: state.profileData.profile.aboutMe,
 	};
 };
 

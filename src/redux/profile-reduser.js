@@ -4,8 +4,9 @@ import like from '../image/like.svg';
 
 const ADD_POST = 'ADD_POST';
 const UPDATE_POST = 'UPDATE_POST';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
-const initialState = {
+let initialState = {
 	profileHeader: {
 		src: lavanda,
 		alt: 'lavanda flauers',
@@ -53,6 +54,8 @@ const initialState = {
 			{ id: 4, name: 'lucky dog', message: 'Great!', likesCount: 0 },
 		],
 	},
+
+	profile: null,
 };
 
 const profileReduser = (state = initialState, action) => {
@@ -85,7 +88,10 @@ const profileReduser = (state = initialState, action) => {
 		}
 
 		case UPDATE_POST:
-			return { ...state, updatePost: action.payLoad };
+			return { ...state, updatePost: action.value };
+
+		case SET_USER_PROFILE:
+			return { ...state, profile: action.profile };
 
 		default:
 			return state;
@@ -93,8 +99,11 @@ const profileReduser = (state = initialState, action) => {
 };
 
 export const addPostActionCreator = () => ({ type: ADD_POST });
+export const setUserProfileAC = (profile) => {
+	return { type: SET_USER_PROFILE, profile };
+};
 export const updatePostActionCreator = (value) => {
-	return { type: UPDATE_POST, payLoad: value };
+	return { type: UPDATE_POST, value };
 };
 
 export default profileReduser;
