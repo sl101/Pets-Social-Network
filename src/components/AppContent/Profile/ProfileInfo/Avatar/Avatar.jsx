@@ -5,8 +5,6 @@ const Avatar = (props) => {
 		<div className={style.picture}>
 			<img
 				className={style.img}
-				// src={props.avatar.photos.large}
-				// alt={`${props.avatar.fullName} ${'photo'}`}
 				src={props.src}
 				alt={props.alt}
 			/>

@@ -1,7 +1,6 @@
 .picture {
 	flex: 0 0 auto;
 	border-radius: 100%;
-	/* border: 5px solid #fff; */
 	box-shadow: 0 0 10px 5px #000, 0 0 0 10px #fff, 0 0 35px 10px#000;
 	overflow: hidden;
 }
