@@ -11,7 +11,7 @@ const AppContent = () => {
 	return (
 		<section className={style.appContent}>
 			<Routes>
-				<Route path="/profile/*" element={<ProfileContainer />} />
+				<Route path="/profile/:userId" element={<ProfileContainer />} />
 				<Route path="/users/*" element={<UsersContainer />} />
 				<Route path="/dialogs/*" element={<DialogsContainer />} />
 				<Route path="/news/*" element={<News />} />
