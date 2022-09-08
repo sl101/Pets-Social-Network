@@ -38,6 +38,7 @@
 }
 
 .side {
+	flex: 0 0 auto;
 	max-width: 120px;
 	width: 100%;
 	text-align: center;

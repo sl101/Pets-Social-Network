@@ -1,5 +1,8 @@
 .header {
 	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	/* background-color: var(--color-broun); */
 	background-color: #754d33;
 	padding: 10px 20px;
@@ -8,4 +11,11 @@
 
 .logo {
 	width: 80px;
+}
+
+.loginBlock {}
+
+.loginLink {
+	font-size: 28px;
+	color: #fff;
 }

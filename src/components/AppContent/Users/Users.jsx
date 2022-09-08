@@ -2,6 +2,7 @@ import React from 'react';
 import style from './Users.module.css';
 import dart from '../../../image/s-l500.jpg';
 import { NavLink } from 'react-router-dom';
+import axios from '../../../../node_modules/axios/index';
 
 const Users = (props) => {
 	let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -35,6 +36,7 @@ const Users = (props) => {
 					);
 				})}
 			</ul>
+
 			<ul className={style.list}>
 				{props.users.map((u) => (
 					<li className={style.item} key={u.id}>
@@ -49,10 +51,46 @@ const Users = (props) => {
 							<button
 								className={style.button}
 								onClick={() => {
-									props.toggleFollow(u.id);
+									if (!u.followed) {
+										// const currentRequest = "post";
+										axios
+											.post(
+												`https://social-network.samuraijs.com/api/1.0//follow/` +
+													u.id,
+												{},
+												{
+													withCredentials: true,
+													headers: {
+														'API-KEY': 'd8313ef6-569b-4a2c-b470-9fe53d523698',
+													},
+												}
+											)
+											.then((respons) => {
+												if (respons.data.resultCode === 0) {
+													props.toggleFollow(u.id);
+												}
+											});
+									} else {
+										axios
+											.delete(
+												`https://social-network.samuraijs.com/api/1.0//follow/` +
+													u.id,
+												{
+													withCredentials: true,
+													headers: {
+														'API-KEY': 'd8313ef6-569b-4a2c-b470-9fe53d523698',
+													},
+												}
+											)
+											.then((respons) => {
+												if (respons.data.resultCode === 0) {
+													props.toggleFollow(u.id);
+												}
+											});
+									}
 								}}
 							>
-								{u.followed ? 'Followed' : 'Unfollowed'}
+								{u.followed ? 'Unfollow' : 'Follow'}
 							</button>
 						</div>
 
