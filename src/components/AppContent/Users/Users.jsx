@@ -52,7 +52,6 @@ const Users = (props) => {
 								className={style.button}
 								onClick={() => {
 									if (!u.followed) {
-										// const currentRequest = "post";
 										axios
 											.post(
 												`https://social-network.samuraijs.com/api/1.0//follow/` +
