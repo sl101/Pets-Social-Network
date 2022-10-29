@@ -1,4 +1,3 @@
-# React App 
+# React App
 
-this is my [home project](https://pets-social-network.vercel.app/) 
-
+this is my [home project](https://sl101.github.io/Pets-Social-Network)
