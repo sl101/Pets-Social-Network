@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Pets-Social-Network/static/css/main.8b7cdf3a.css",
+    "main.js": "/Pets-Social-Network/static/js/main.e5e7c050.js",
+    "static/media/lavanda.jpg": "/Pets-Social-Network/static/media/lavanda.94daa3e12003b4eb82e4.jpg",
+    "static/media/french_bulldog.jpg": "/Pets-Social-Network/static/media/french_bulldog.cd5ba6b41bf5d88da7f3.jpg",
+    "static/media/s-l500.jpg": "/Pets-Social-Network/static/media/s-l500.1d869f17f1c45c26346b.jpg",
+    "static/media/loading.gif": "/Pets-Social-Network/static/media/loading.b8eaef343f76e037e251.gif",
+    "static/media/fr-buldog.svg": "/Pets-Social-Network/static/media/fr-buldog.b7782c78d437ecc32ddccdef42aad93b.svg",
+    "static/media/like.svg": "/Pets-Social-Network/static/media/like.75f9bea19bc19b9c135680982ab818e9.svg",
+    "index.html": "/Pets-Social-Network/index.html",
+    "main.8b7cdf3a.css.map": "/Pets-Social-Network/static/css/main.8b7cdf3a.css.map",
+    "main.e5e7c050.js.map": "/Pets-Social-Network/static/js/main.e5e7c050.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b7cdf3a.css",
+    "static/js/main.e5e7c050.js"
+  ]
+}
